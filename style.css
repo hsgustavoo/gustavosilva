@@ -1,0 +1,387 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 10px; /* Margem para garantir que o conteúdo não fique colado na borda */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #004aad;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('Foto\ de\ Capa.png'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a seção */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombreado preto semi-transparente */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo esteja acima do sombreado */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 1em;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Azul destacado */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #003b80;
+    transform: scale(1.05);
+}
+
+/* Seções Gerais */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.section h2 {
+    font-size: 2em;
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.section p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1em; /* Ajustando o tamanho da fonte para facilitar a leitura */
+}
+
+/* Informações de Contato */
+#contato-info {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+}
+
+#contato-info h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-item {
+    background-color: #dcdcdc; /* Cor de fundo cinza */
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-item span {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 5px;
+}
+
+.contact-item a {
+    display: block;
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Currículo */
+.section .btn {
+    background-color: #004aad;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.section .btn:hover {
+    background-color: #003b80;
+}
+
+/* Habilidades */
+#habilidades {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#habilidades h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas flexíveis */
+    gap: 2rem; /* Espaçamento entre as colunas */
+}
+
+.skill-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item h3 {
+    font-size: 1.6rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+    }
+}
+
+/* Formulário de Contato */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: 500;
+    margin-top: 15px;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #004aad;
+    outline: none;
+}
+
+form button {
+    background-color: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #003b80;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Seções Gerais */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #004aad;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.section p {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.section .social-text {
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .section p {
+        font-size: 1.1em;
+    }
+}
